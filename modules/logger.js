@@ -51,7 +51,9 @@ var getVar = {
         return req.headers['referer'] || req.headers['referrer'];
     },
     ip: function (req) {
-        return (req.connection && req.connection.remoteAddress) 
+        return req.headers['x-real-ip'] 
+            || req.headers['x-forwarded-for'] 
+            || (req.connection && req.connection.remoteAddress) 
             || req._remoteAddress 
             || req.ip 
             || '';
