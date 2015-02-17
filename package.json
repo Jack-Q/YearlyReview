@@ -1,6 +1,6 @@
 {
   "name": "Review2014",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": true,
   "description": "a sample node.js app for jae",
   "main": "app.js",

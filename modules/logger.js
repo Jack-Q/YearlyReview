@@ -60,6 +60,7 @@ var getVar = {
         if (ret.indexOf(',') !== -1) {
             ret = ret.slice(0, ret.indexOf(','));
         }
+		return ret;
     },
     userAgent: function (req) {
         return req.headers["user-agent"] || "";
