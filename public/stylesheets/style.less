@@ -2,14 +2,11 @@ html, body, div {
     margin: 0;
     padding: 0;
     font-family: "Microsoft YaHei UI","Helvetica Neue","Microsoft YaHei",'Segoe UI',"SimHei", Tahoma, Geneva, Verdana, sans-serif;
-    //-ms-touch-action: none;
-    //touch-action: none;
 }
 
 html, body {
     width: 100%;
     height: 100%;
-    overflow: hidden;
     background-color: #1e1e1e;
     position: relative;
 }
@@ -18,127 +15,224 @@ html, body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
 
     .page-title {
-        text-align:center;
-        font-size:30px;
+        text-align: left;
+        font-size: 45px;
+        padding: 30px 0 30px 20px;
+        text-shadow: rgba(170,170,170,0.7) 0 0 3px,rgba(50,50,50,0.7) 0 0 2px,rgba(0,0,0,0.9) 0 0 1px;
+        color: rgba(220,220,220,0.9);
+        font-family: SimSun,'Microsoft YaHei UI','Microsoft YaHei',serif;
+    }
+
+    .page-words {
+        text-align: center;
+        width: 100%;
+        display: block;
+        font-size: 22px;
+        text-shadow: rgba(20,20,20,0.5) 0 0 2px,rgba(111,111,111,0.5) 0 0 1px;
+        color: rgba(180,200,220,0.9);
+        font-weight: 100;
+
+        span {
+            margin: 5px auto;
+            padding-right: 5%;
+            display: block;
+        }
     }
 }
 
 .splansh {
-    z-index: 60000;
-    background: #21BDFE;;
-    .inner-wrap{
+    background: #21BDFE;
+
+    .inner-wrap {
         position: absolute;
-        top:0px;
-        bottom:0px;
-        left:0;
-        right:0;
-        margin:auto;
-        height:300px;
-        .logo{
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 300px;
+
+        .logo {
             margin: auto;
-            width:100%;
-            .logo-2014{
-                width:220px;
-                height:220px;
-                background:rgba(70,220,130,0.7);
+            width: 100%;
+
+            .logo-2014 {
+                width: 220px;
+                height: 220px;
+                background: rgba(70,220,130,0.7);
                 background-image: linear-gradient(rgba(70,220,130,0.7),rgba(70,220,130,0.2));
                 border-radius: 50%;
-                margin:auto;
+                margin: auto;
             }
-            .logo-review{
-                top:-25px;
+
+            .logo-review {
+                top: -25px;
                 position: absolute;
                 width: 50%;
-                padding:10px 10px 3px 0;
-                min-width:170px;
-                height:50px;
-                background:rgba(200, 70, 10, 0.7);
-                text-align:right;
-                
-                svg{
-                    fill:#bed0e8;
-                    width:160px;
-                    height:50px;                   
+                padding: 10px 10px 3px 0;
+                min-width: 170px;
+                height: 50px;
+                background: rgba(200, 70, 10, 0.7);
+                text-align: right;
+
+                svg {
+                    fill: #bed0e8;
+                    width: 160px;
+                    height: 50px;
                     margin-right: 5px;
-                    
                 }
             }
         }
-        .progress{
+
+        .progress {
             width: 100px;
-            height:3px;
+            height: 3px;
             border-radius: 50%;
-            background: rgba(210,210,210,0.3);   
-            margin:10px auto;
+            background: rgba(210,210,210,0.3);
+            margin: 10px auto;
             position: relative;
-            .progress-pos{
+
+            .progress-pos {
                 position: absolute;
                 box-shadow: 0 0 5px 2px rgba(220,220,220,.9);
-                width:5px;
-                height:5px;
+                width: 5px;
+                height: 5px;
                 border-radius: 50%;
                 background-color: rgba(220,220,220,.8);
-                border:0px;
-                top:-1.5px;
+                border: 0;
+                top: -1.5px;
+            }
+        }
+
+        .splansh-word {
+            width: 100%;
+
+            span {
+                display: block;
+                margin: auto;
+                text-align: center;
+                font-size: 0.8em;
+                color: rgba(255,255,255,0.7);
+                text-shadow: 0 0 1px rgba(220,220,220,0.3);
             }
         }
     }
-    
 }
 
 .hardworking {
-    z-index: 50000;
-    background: #FEB615;
+    background: #CE9615;
 }
 
 .determine {
-    z-index: 40000;
-    background: #5D5FE7
+    background: #5D5FE7;
 }
 
 .adjust {
-    z-index: 30000;
-    background: #5BFE00;
+    background: #4BAE00;
 }
 
 .enjoy {
-    z-index: 20000;
     background: #2E7BE7;
 }
 
 .nothing {
-    z-index: 10000;
     background: #45444c;
 }
 
-.end-wrapper {
+.new-year {
     width: 100%;
-    height: 100%;
-    overflow-y: scroll;
+    overflow: hidden;
+
+    .new {
+        text-align: center;
+        font-size: 30px;
+        color: #a38977;
+        margin: 40px auto;
+        text-shadow: #888 0 0 2px;
+    }
+
+    .new-word {
+        text-align: center;
+        width: 100%;
+        display: block;
+        font-size: 17px;
+        text-shadow: rgba(70,70,70,0.3) 0 0 2px;
+        color: rgba(120,120,120,0.7);
+        font-weight: 100;
+        margin-bottom: 50px;
+
+        span {
+            margin: 5px auto;
+            padding-right: 10%;
+            display: block;
+        }
+    }
+
+    .constructing {
+        width: 100%;
+        background: rgba(140,140,140,0.3);
+        padding: 40px 0;
+        overflow-x: auto;
+        margin-bottom:40px;
+        .str {
+            min-width: 240px;
+            font-weight: 200;
+            font-size: 40px;
+            color: #b87658;
+            text-align: center;
+        }
+
+        .tra {
+            min-width: 240px;
+            font-size: 15px;
+            color: #a86678;
+            text-align: center;
+            word-spacing: 17px;
+        }
+
+        border-top: 2px #787767 solid;
+        border-bottom: 2px #787767 solid;
+    }
+}
+
+.end-wrapper {
+    margin-top: 30px;
+    border-top: solid 1px #454443;
+    width: 100%;
+    min-height: 100%;
 
     .end {
         margin: auto;
         padding: 0 15px;
         max-width: 800px;
+
+        .cpy {
+            display: block;
+            text-align: center;
+            color: #565556;
+            font-size: 14px;
+            margin: 25px auto;
+        }
     }
 }
+
 
 //Duoshuo comment block style fixer
 .comment {
     width: 100%;
     position: relative;
-
     #ds-reset {
         div.ds-avatar {
             overflow: hidden;
             border-radius: 50%;
         }
     }
+}
+
+div.comment#ds-thread #ds-reset div.ds-login-buttons div.ds-social-links {
+    width: auto;
 }
 
 div#ds-smilies-tooltip {

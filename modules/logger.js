@@ -51,12 +51,15 @@ var getVar = {
         return req.headers['referer'] || req.headers['referrer'];
     },
     ip: function (req) {
-        return req.headers['x-real-ip'] 
+        var ret = req.headers['x-real-ip'] 
             || req.headers['x-forwarded-for'] 
             || (req.connection && req.connection.remoteAddress) 
             || req._remoteAddress 
             || req.ip 
             || '';
+        if (ret.indexOf(',') !== -1) {
+            ret = ret.slice(0, ret.indexOf(','));
+        }
     },
     userAgent: function (req) {
         return req.headers["user-agent"] || "";
