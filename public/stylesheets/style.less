@@ -1,4 +1,4 @@
-﻿html, body, div {
+html, body, div {
     margin: 0;
     padding: 0;
     font-family: "Microsoft YaHei UI","Helvetica Neue","Microsoft YaHei",'Segoe UI',"SimHei", Tahoma, Geneva, Verdana, sans-serif;
@@ -10,24 +10,111 @@ html, body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: #090b0e;
-    position:relative;
-
+    background-color: #1e1e1e;
+    position: relative;
 }
 
-.page-box{
-    width:100%;
-    height:100%;
-    overflow:hidden;
-    position:absolute;
-    top:0;
-    left:0;
-    .page-title{
+.page-box {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
 
+    .page-title {
+        text-align:center;
+        font-size:30px;
     }
 }
 
+.splansh {
+    z-index: 60000;
+    background: #21BDFE;;
+    .inner-wrap{
+        position: absolute;
+        top:0px;
+        bottom:0px;
+        left:0;
+        right:0;
+        margin:auto;
+        height:300px;
+        .logo{
+            margin: auto;
+            width:100%;
+            .logo-2014{
+                width:220px;
+                height:220px;
+                background:rgba(70,220,130,0.7);
+                background-image: linear-gradient(rgba(70,220,130,0.7),rgba(70,220,130,0.2));
+                border-radius: 50%;
+                margin:auto;
+            }
+            .logo-review{
+                top:-25px;
+                position: absolute;
+                width: 50%;
+                padding:10px 10px 3px 0;
+                min-width:170px;
+                height:50px;
+                background:rgba(200, 70, 10, 0.7);
+                text-align:right;
+                
+                svg{
+                    fill:#bed0e8;
+                    width:160px;
+                    height:50px;                   
+                    margin-right: 5px;
+                    
+                }
+            }
+        }
+        .progress{
+            width: 100px;
+            height:3px;
+            border-radius: 50%;
+            background: rgba(210,210,210,0.3);   
+            margin:10px auto;
+            position: relative;
+            .progress-pos{
+                position: absolute;
+                box-shadow: 0 0 5px 2px rgba(220,220,220,.9);
+                width:5px;
+                height:5px;
+                border-radius: 50%;
+                background-color: rgba(220,220,220,.8);
+                border:0px;
+                top:-1.5px;
+            }
+        }
+    }
+    
+}
 
+.hardworking {
+    z-index: 50000;
+    background: #FEB615;
+}
+
+.determine {
+    z-index: 40000;
+    background: #5D5FE7
+}
+
+.adjust {
+    z-index: 30000;
+    background: #5BFE00;
+}
+
+.enjoy {
+    z-index: 20000;
+    background: #2E7BE7;
+}
+
+.nothing {
+    z-index: 10000;
+    background: #45444c;
+}
 
 .end-wrapper {
     width: 100%;
@@ -36,7 +123,7 @@ html, body {
 
     .end {
         margin: auto;
-        padding:0 15px;
+        padding: 0 15px;
         max-width: 800px;
     }
 }

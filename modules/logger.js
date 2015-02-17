@@ -1,4 +1,5 @@
 ﻿// This is a customized logger write logs into database.
+
 var mysql = require('mysql');
 var onFinished = require('on-finished');
 var http = require('http');
@@ -17,7 +18,8 @@ var server_db_config = {
     password: 'FRg7kpmbSzOX',
     database: 'jackq201m_mysql_galddzuv'
 };
-var database = mysql.createConnection(server_db_config);
+
+var database = mysql.createConnection(process.env["NODE_LOCAL_DEBUG_MODE"] === '1'?local_db_config:server_db_config);
 
 var cfg = {
     verbose: true,
@@ -49,9 +51,9 @@ var getVar = {
         return req.headers['referer'] || req.headers['referrer'];
     },
     ip: function (req) {
-        return req.ip 
+        return (req.connection && req.connection.remoteAddress) 
             || req._remoteAddress 
-            || (req.connection && req.connection.remoteAddress) 
+            || req.ip 
             || '';
     },
     userAgent: function (req) {
@@ -108,7 +110,7 @@ module.exports = function (debugMode) {
                     + ' `geo_country`, `geo_area` , `geo_region` , `geo_city` , `geo_county` , `geo_isp` ' 
                     + ' ) values (' 
                     + ' now(), ? , ? , ? , ? , ? , ? , ? ' 
-                    + ' , ? , ? , ? , ? , ? , ?'
+                    + ' , ? , ? , ? , ? , ? , ?' 
                     + ')', [
                             data.ip, data.userAgent, data.referer, data.pageUrl, 
                             data.httpStatusCode, data.renderTime, data.responseType,
